@@ -1,0 +1,161 @@
+---------------------------------- pk 12 of log : 2020-03-20 16:38:23.400174 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+Requirement already satisfied: dataprep in ./dataVenv/lib/python3.8/site-packages (0.2.0)
+Requirement already satisfied: numpy<1.18,>=1.17 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (1.17.5)
+Requirement already satisfied: probscale<0.3,>=0.2 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (0.2.3)
+Requirement already satisfied: requests<2.23,>=2.22 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (2.22.0)
+Requirement already satisfied: bokeh<1.5,>=1.4 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (1.4.0)
+Requirement already satisfied: dask[complete]<2.10,>=2.9 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (2.9.2)
+Requirement already satisfied: jsonschema<3.2,>=3.1 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (3.1.1)
+Requirement already satisfied: holoviews<1.13,>=1.12 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (1.12.7)
+Requirement already satisfied: lxml<4.5,>=4.4 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (4.4.3)
+Requirement already satisfied: pandas<0.26,>=0.25 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (0.25.3)
+Requirement already satisfied: scipy<1.4,>=1.3 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (1.3.3)
+Requirement already satisfied: jinja2<2.11,>=2.10 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (2.10.3)
+Requirement already satisfied: jsonpath2<0.5,>=0.4 in ./dataVenv/lib/python3.8/site-packages (from dataprep) (0.4.3)
+Requirement already satisfied: matplotlib in ./dataVenv/lib/python3.8/site-packages (from probscale<0.3,>=0.2->dataprep) (3.2.1)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./dataVenv/lib/python3.8/site-packages (from requests<2.23,>=2.22->dataprep) (3.0.4)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in ./dataVenv/lib/python3.8/site-packages (from requests<2.23,>=2.22->dataprep) (1.25.8)
+Requirement already satisfied: certifi>=2017.4.17 in ./dataVenv/lib/python3.8/site-packages (from requests<2.23,>=2.22->dataprep) (2019.11.28)
+Requirement already satisfied: idna<2.9,>=2.5 in ./dataVenv/lib/python3.8/site-packages (from requests<2.23,>=2.22->dataprep) (2.8)
+Requirement already satisfied: six>=1.5.2 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (1.14.0)
+Requirement already satisfied: PyYAML>=3.10 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (5.3.1)
+Requirement already satisfied: python-dateutil>=2.1 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (2.8.1)
+Requirement already satisfied: pillow>=4.0 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (7.0.0)
+Requirement already satisfied: packaging>=16.8 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (20.3)
+Requirement already satisfied: tornado>=4.3 in ./dataVenv/lib/python3.8/site-packages (from bokeh<1.5,>=1.4->dataprep) (6.0.4)
+Requirement already satisfied: fsspec>=0.6.0; extra == "complete" in ./dataVenv/lib/python3.8/site-packages (from dask[complete]<2.10,>=2.9->dataprep) (0.6.3)
+Requirement already satisfied: cloudpickle>=0.2.1; extra == "complete" in ./dataVenv/lib/python3.8/site-packages (from dask[complete]<2.10,>=2.9->dataprep) (1.3.0)
+Requirement already satisfied: distributed>=2.0; extra == "complete" in ./dataVenv/lib/python3.8/site-packages (from dask[complete]<2.10,>=2.9->dataprep) (2.12.0)
+Requirement already satisfied: partd>=0.3.10; extra == "complete" in ./dataVenv/lib/python3.8/site-packages (from dask[complete]<2.10,>=2.9->dataprep) (1.1.0)
+Requirement already satisfied: toolz>=0.7.3; extra == "complete" in ./dataVenv/lib/python3.8/site-packages (from dask[complete]<2.10,>=2.9->dataprep) (0.10.0)
+Requirement already satisfied: attrs>=17.4.0 in ./dataVenv/lib/python3.8/site-packages (from jsonschema<3.2,>=3.1->dataprep) (19.3.0)
+Requirement already satisfied: pyrsistent>=0.14.0 in ./dataVenv/lib/python3.8/site-packages (from jsonschema<3.2,>=3.1->dataprep) (0.15.7)
+Requirement already satisfied: setuptools in ./dataVenv/lib/python3.8/site-packages (from jsonschema<3.2,>=3.1->dataprep) (46.0.0)
+Requirement already satisfied: importlib-metadata in ./dataVenv/lib/python3.8/site-packages (from jsonschema<3.2,>=3.1->dataprep) (1.5.0)
+Requirement already satisfied: param<2.0,>=1.8.0 in ./dataVenv/lib/python3.8/site-packages (from holoviews<1.13,>=1.12->dataprep) (1.9.3)
+Requirement already satisfied: pyviz-comms>=0.7.2 in ./dataVenv/lib/python3.8/site-packages (from holoviews<1.13,>=1.12->dataprep) (0.7.4)
+Requirement already satisfied: pytz>=2017.2 in ./dataVenv/lib/python3.8/site-packages (from pandas<0.26,>=0.25->dataprep) (2019.3)
+Requirement already satisfied: MarkupSafe>=0.23 in ./dataVenv/lib/python3.8/site-packages (from jinja2<2.11,>=2.10->dataprep) (1.1.1)
+Requirement already satisfied: antlr4-python3-runtime==4.7.2 in ./dataVenv/lib/python3.8/site-packages (from jsonpath2<0.5,>=0.4->dataprep) (4.7.2)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in ./dataVenv/lib/python3.8/site-packages (from matplotlib->probscale<0.3,>=0.2->dataprep) (2.4.6)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./dataVenv/lib/python3.8/site-packages (from matplotlib->probscale<0.3,>=0.2->dataprep) (1.1.0)
+Requirement already satisfied: cycler>=0.10 in ./dataVenv/lib/python3.8/site-packages (from matplotlib->probscale<0.3,>=0.2->dataprep) (0.10.0)
+Requirement already satisfied: click>=6.6 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (7.1.1)
+Requirement already satisfied: tblib>=1.6.0 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (1.6.0)
+Requirement already satisfied: zict>=0.1.3 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (2.0.0)
+Requirement already satisfied: sortedcontainers!=2.0.0,!=2.0.1 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (2.1.0)
+Requirement already satisfied: psutil>=5.0 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (5.7.0)
+Requirement already satisfied: msgpack>=0.6.0 in ./dataVenv/lib/python3.8/site-packages (from distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (1.0.0)
+Requirement already satisfied: locket in ./dataVenv/lib/python3.8/site-packages (from partd>=0.3.10; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (0.2.0)
+Requirement already satisfied: zipp>=0.5 in ./dataVenv/lib/python3.8/site-packages (from importlib-metadata->jsonschema<3.2,>=3.1->dataprep) (3.1.0)
+Requirement already satisfied: heapdict in ./dataVenv/lib/python3.8/site-packages (from zict>=0.1.3->distributed>=2.0; extra == "complete"->dask[complete]<2.10,>=2.9->dataprep) (1.0.1)
+
+에러 메시지:
+Traceback (most recent call last):
+  File "./download/12.py", line 52, in <module>
+    __import__(module)
+  File "/home/jb/python/projects/data-election/dataVenv/lib/python3.8/site-packages/dataprep/__init__.py", line 8, in <module>
+    import toml
+ModuleNotFoundError: No module named 'toml'
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:07:46.913502 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+Traceback (most recent call last):
+  File "./download/13.py", line 86, in <module>
+    exec(fini)
+  File "<string>", line 2, in <module>
+  File "/home/jb/python/projects/data-election/download/reports.py", line 3, in <module>
+    from models import ChallengeRecord
+ModuleNotFoundError: No module named 'models'
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:08:48.174936 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:10:48.779726 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+result 진입
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:14:35.290884 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+result 진입
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:17:34.341819 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+result 진입
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:23:43.663487 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+result 진입
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 13 : 2020-03-21 02:29:34.514930 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+result 진입
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 14 : 2020-03-21 02:43:25.086953 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+-------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 15 : 2020-03-21 02:53:45.120741 ----------------------------------
+출력 메시지:
+
+에러 메시지:
+  File "./work/15.py", line 74
+    cand = "박정빈""
+                 ^
+SyntaxError: EOL while scanning string literal
+-----------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 16 : 2020-03-21 02:56:21.870474 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+-----------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 16 : 2020-03-21 02:59:22.196763 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+-----------------------------------------------------------------------------------------------------------
+
+---------------------------------- log of pk 17 : 2020-03-21 03:00:17.644386 ----------------------------------
+출력 메시지:
+Requirement already up-to-date: pip in ./dataVenv/lib/python3.8/site-packages (20.0.2)
+
+에러 메시지:
+-----------------------------------------------------------------------------------------------------------
