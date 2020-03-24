@@ -8,8 +8,14 @@
   <body>
     <form action="upload/" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
+      <label for="member">member_id: </label>
+      <input type="text" id="memeber" name="member_id" /><br />
+      <input type="radio" id="easy" name="file_type" value="EASY" />
+      <label for="easy">EASY</label>
+      <input type="radio" id="hard" name="file_type" value="HARD" />
+      <label for="hard">HARD</label><br />
       <input type="file" name="file" />
-      <input type="submit" />
+      <input type="submit" value="제출" />
     </form>
   </body>
 </html>

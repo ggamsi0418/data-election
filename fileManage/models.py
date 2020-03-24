@@ -6,6 +6,10 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from datetime import datetime
+
+today = datetime.now()
+today_date = f"{today.month}_{today.day}"
 
 
 class AuthGroup(models.Model):
@@ -75,11 +79,13 @@ class AuthUserUserPermissions(models.Model):
 
 
 class ChallengeRecord(models.Model):
-    cr_id = models.AutoField(primary_key=True)
-    file_id = models.IntegerField()
+    challenge_record_id = models.AutoField(primary_key=True)
+    member_id = models.IntegerField(blank=True, null=True)
+    admin_check = models.IntegerField(blank=True, null=True)
     precinct = models.CharField(max_length=10, blank=True, null=True)
     candidate = models.CharField(max_length=10, blank=True, null=True)
     create_date = models.DateTimeField()
+    updated_date = models.DateTimeField(auto_now=True, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -92,7 +98,8 @@ class DjangoAdminLog(models.Model):
     object_repr = models.CharField(max_length=200)
     action_flag = models.PositiveSmallIntegerField()
     change_message = models.TextField()
-    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
+    content_type = models.ForeignKey(
+        'DjangoContentType', models.DO_NOTHING, blank=True, null=True)
     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
 
     class Meta:
@@ -130,11 +137,23 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
-class UploadedFile(models.Model):
-    file_id = models.AutoField(primary_key=True)
-    file = models.TextField(blank=True, null=True)
-    upload_date = models.DateTimeField()
+def user_directory_path(instance, filename):
+
+    return 'member_{}/{}'.format(instance.member_id, filename)
+
+
+class Upload(models.Model):
+    upload_id = models.AutoField(primary_key=True)
+    member_id = models.IntegerField()
+    file_type = models.CharField(max_length=45, blank=True, null=True)
+    file_name = models.CharField(max_length=45, blank=True, null=True)
+    # file_location = models.FileField(
+    #     upload_to=f'{today_date}/')
+    file_location = models.FileField(
+        upload_to=user_directory_path)
+    created_date = models.DateTimeField()
+    validation = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'uploaded_file'
+        db_table = 'upload'
