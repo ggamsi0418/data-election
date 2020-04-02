@@ -20,3 +20,8 @@
 <[2020-04-02 19:45:51.581529] 비정상에러@naver.com 컴파일에러 Traceback(mostrecentcalllast):File"./temp/5255/data/sample_template_02.py",line80,in<module>date=pd.data('20200326',period=6)File"/home/jb/python/projects/data-election/dataVenv/lib/python3.8/site-packages/pandas/__init__.py",line263,in__getattr__raiseAttributeError(f"module'pandas'hasnoattribute'{name}'")AttributeError:module'pandas'hasnoattribute'data'>
 <[2020-04-02 19:53:34.216330] 정상@naver.com 정상처리 >
 <[2020-04-02 20:01:39.114990] 분석에러@naver.com 컴파일에러 File"./temp/4144/data/sample_template_03.py",line84princint="강남구갑""^SyntaxError:EOLwhilescanningstringliteral>
+<[2020-04-02 20:14:05.858122] 잘못된결과분석@naver.com 컴파일에러 Traceback(mostrecentcalllast):File"./temp/7979/data/sample_template_04.py",line97,in<module>exec(fini)File"<string>",line15,in<module>NameError:name'prec'isnotdefined>
+<[2020-04-02 20:19:50.398623] 잘못된결과분석@naver.com 컴파일에러 Traceback(mostrecentcalllast):File"./temp/7979/data/sample_template_04.py",line97,in<module>exec(fini)File"<string>",line15,in<module>NameError:name'prec'isnotdefined>
+<[2020-04-02 20:23:15.046661] 잘못된결과분석@naver.com 컴파일에러 File"./temp/7777/data/sample_template_04.py",line84prec="강남구갑""^SyntaxError:EOLwhilescanningstringliteral>
+<[2020-04-02 20:24:54.534410] 잘못된결과분석@naver.com 잘못된출력값 잘못된후보명>
+<[2020-04-02 20:30:39.417955] 잘못된결과분석@naver.com 잘못된출력값 지역구와후보자명이잘못매칭됐습니다.>

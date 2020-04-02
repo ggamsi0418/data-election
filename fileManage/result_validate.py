@@ -11,8 +11,8 @@ def result_validate(precinct, candidate):
         if candidate in candidate_list:
             return (True, "")
         else:
-            error_msg = "잘못된후보명"
+            error_msg = "지역구와후보자명이잘못매칭됐습니다."
             return (False, error_msg)
     else:
-        error_msg = "잘못된지역구"
+        error_msg = "지역구가잘못입력됐습니다."
         return (False, error_msg)
