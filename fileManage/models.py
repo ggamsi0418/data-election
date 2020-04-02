@@ -6,10 +6,6 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-from datetime import datetime
-
-today = datetime.now()
-today_date = f"{today.month}_{today.day}"
 
 
 class AuthGroup(models.Model):
@@ -17,28 +13,28 @@ class AuthGroup(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_group'
+        db_table = "auth_group"
 
 
 class AuthGroupPermissions(models.Model):
     group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
-    permission = models.ForeignKey('AuthPermission', models.DO_NOTHING)
+    permission = models.ForeignKey("AuthPermission", models.DO_NOTHING)
 
     class Meta:
         managed = False
-        db_table = 'auth_group_permissions'
-        unique_together = (('group', 'permission'),)
+        db_table = "auth_group_permissions"
+        unique_together = (("group", "permission"),)
 
 
 class AuthPermission(models.Model):
     name = models.CharField(max_length=255)
-    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING)
+    content_type = models.ForeignKey("DjangoContentType", models.DO_NOTHING)
     codename = models.CharField(max_length=100)
 
     class Meta:
         managed = False
-        db_table = 'auth_permission'
-        unique_together = (('content_type', 'codename'),)
+        db_table = "auth_permission"
+        unique_together = (("content_type", "codename"),)
 
 
 class AuthUser(models.Model):
@@ -55,7 +51,7 @@ class AuthUser(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_user'
+        db_table = "auth_user"
 
 
 class AuthUserGroups(models.Model):
@@ -64,8 +60,8 @@ class AuthUserGroups(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_user_groups'
-        unique_together = (('user', 'group'),)
+        db_table = "auth_user_groups"
+        unique_together = (("user", "group"),)
 
 
 class AuthUserUserPermissions(models.Model):
@@ -74,8 +70,18 @@ class AuthUserUserPermissions(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'auth_user_user_permissions'
-        unique_together = (('user', 'permission'),)
+        db_table = "auth_user_user_permissions"
+        unique_together = (("user", "permission"),)
+
+
+class CandidateInfo(models.Model):
+    candidate_id = models.AutoField(primary_key=True)
+    precinct = models.CharField(max_length=45, blank=True, null=True)
+    candidate = models.CharField(max_length=45, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = "candidate_info"
 
 
 class ChallengeRecord(models.Model):
@@ -85,11 +91,10 @@ class ChallengeRecord(models.Model):
     precinct = models.CharField(max_length=10, blank=True, null=True)
     candidate = models.CharField(max_length=10, blank=True, null=True)
     create_date = models.DateTimeField()
-    updated_date = models.DateTimeField(auto_now=True, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'challenge_record'
+        db_table = "challenge_record"
 
 
 class DjangoAdminLog(models.Model):
@@ -99,12 +104,13 @@ class DjangoAdminLog(models.Model):
     action_flag = models.PositiveSmallIntegerField()
     change_message = models.TextField()
     content_type = models.ForeignKey(
-        'DjangoContentType', models.DO_NOTHING, blank=True, null=True)
+        "DjangoContentType", models.DO_NOTHING, blank=True, null=True
+    )
     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
 
     class Meta:
         managed = False
-        db_table = 'django_admin_log'
+        db_table = "django_admin_log"
 
 
 class DjangoContentType(models.Model):
@@ -113,8 +119,8 @@ class DjangoContentType(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'django_content_type'
-        unique_together = (('app_label', 'model'),)
+        db_table = "django_content_type"
+        unique_together = (("app_label", "model"),)
 
 
 class DjangoMigrations(models.Model):
@@ -124,7 +130,7 @@ class DjangoMigrations(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'django_migrations'
+        db_table = "django_migrations"
 
 
 class DjangoSession(models.Model):
@@ -134,12 +140,12 @@ class DjangoSession(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'django_session'
+        db_table = "django_session"
 
 
 def user_directory_path(instance, filename):
 
-    return 'member_{}/{}'.format(instance.member_id, filename)
+    return f"{instance.member_id}/report/{filename}"
 
 
 class Upload(models.Model):
@@ -147,13 +153,10 @@ class Upload(models.Model):
     member_id = models.IntegerField()
     file_type = models.CharField(max_length=45, blank=True, null=True)
     file_name = models.CharField(max_length=45, blank=True, null=True)
-    # file_location = models.FileField(
-    #     upload_to=f'{today_date}/')
-    file_location = models.FileField(
-        upload_to=user_directory_path)
+    file_location = models.FileField(upload_to=user_directory_path)
     created_date = models.DateTimeField()
-    validation = models.IntegerField(blank=True, null=True)
+    validation = models.BooleanField(default=False)
 
     class Meta:
         managed = False
-        db_table = 'upload'
+        db_table = "upload"

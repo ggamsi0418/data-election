@@ -1,0 +1,2 @@
+<[2020-03-26 20:32:28.691377] ggamsi0418@naver.com 정상처리 >
+<[2020-03-26 20:51:29.024653] qkrwjdqls@naver.com 컴파일오류 Traceback(mostrecentcalllast):File"./temp/3264/data/sample_template_02.py",line71,in<module>date=pd.data('20200326',period=6)File"/home/jb/python/projects/data-election/dataVenv/lib/python3.8/site-packages/pandas/__init__.py",line263,in__getattr__raiseAttributeError(f"module'pandas'hasnoattribute'{name}'")AttributeError:module'pandas'hasnoattribute'data'>

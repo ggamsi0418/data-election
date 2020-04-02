@@ -3,7 +3,7 @@ from django.urls import path, include
 from fileManage import views
 
 urlpatterns = [
-    path('', views.index),
-    path('upload/', views.upload),
-    path('validation/', views.validation)
+    path("", views.index),
+    path("upload/", views.upload),
+    path("verify/", views.djangoServer),
 ]
